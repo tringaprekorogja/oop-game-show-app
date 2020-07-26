@@ -105,9 +105,26 @@ class Game {
     * Handles onscreen keyboard button clicks
     * @param (HTMLButtonElement) button - The clicked button element
     */
-   
+
     handleInteraction(button) {
-        console.log(button);
+        console.log(button)
+        button.disabled = 'true'
+        let letter = button.textContent
+        let phrase = this.activePhrase
+        if(!phrase.checkLetter(letter)){
+            button.className ='wrong'
+            this.removeLife()
+            
+        }else if(phrase.checkLetter(letter)){
+            button.className ='chosen'
+            phrase.showMatchedLetter(letter)
+            this.checkForwin()
+            if(this.checkForwin()){
+                this.gameOver(true)
+            }
+
+        }
+
     };
 
 
