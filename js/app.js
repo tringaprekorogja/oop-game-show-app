@@ -6,9 +6,16 @@ let game;
 
 const btnToStartGame = document.querySelector('#btn__reset')
 
-btnToStartGame.addEventListener('click', ()=>{
+btnToStartGame.addEventListener('click', () => {
     game = new Game();
     game.startGame();
+    console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+
 })
+
+
+
+
+
 
 
