@@ -63,6 +63,7 @@ class Game {
    */
     removeLife() {
         const liveHeart = document.querySelectorAll('.tries img')
+
         this.missed++;
 
         if (this.missed === 1) {
@@ -84,11 +85,10 @@ class Game {
     * @param {boolean} gameWon - Whether or not the user won the game
     */
     gameOver(gameWon) {
-        
         const startScreenOverlay = document.querySelector('#overlay')
         startScreenOverlay.style.display = 'block';
 
-        if (gameWon){
+        if (gameWon) {
             startScreenOverlay.className = 'win';
             const gameOverMessage = document.querySelector('#game-over-message')
             gameOverMessage.textContent = 'Great Job!'
@@ -100,6 +100,14 @@ class Game {
         }
 
 
+    };
+    /**
+    * Handles onscreen keyboard button clicks
+    * @param (HTMLButtonElement) button - The clicked button element
+    */
+   
+    handleInteraction(button) {
+        console.log(button);
     };
 
 

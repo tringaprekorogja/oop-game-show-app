@@ -13,7 +13,14 @@ btnToStartGame.addEventListener('click', () => {
 
 })
 
+const keyboardButtons = document.querySelector('#qwerty')
 
+keyboardButtons.addEventListener('click',(e)=>{
+    if(e.target.tagName === 'BUTTON'){
+        const button = e.target
+        game.handleInteraction(button)
+    }
+})
 
 
 
