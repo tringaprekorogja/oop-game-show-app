@@ -107,7 +107,6 @@ class Game {
     */
 
     handleInteraction(button) {
-        console.log(button)
         button.disabled = 'true'
         let letter = button.textContent
         let phrase = this.activePhrase

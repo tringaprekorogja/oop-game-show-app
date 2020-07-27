@@ -13,7 +13,7 @@ class Phrase {
 
     addPhraseToDisplay() {
         const phraseUl = document.querySelector('#phrase ul')
-
+        
         for (let i = 0; i < this.phrase.length; i++) {
             let letterListItem = document.createElement('LI');
             letterListItem.textContent = this.phrase[i];
@@ -51,22 +51,18 @@ class Phrase {
     */
     showMatchedLetter(letter) {
         if (this.checkLetter(letter)) {
-
             const listItems = document.querySelectorAll('li')
-
-            for(let item of listItems){
-
-                if (item.className === 'hide letter ' + letter){
-                   
+            for (let item of listItems) {
+                if (item.className === 'hide letter ' + letter) {
                     item.className = 'show letter ' + letter
-                } 
-            
+                }
+
             }
-            
-      
-          
+
+
+
         }
-    
+
     };
 
 
