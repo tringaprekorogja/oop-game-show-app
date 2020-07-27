@@ -51,19 +51,22 @@ class Phrase {
     */
     showMatchedLetter(letter) {
         if (this.checkLetter(letter)) {
-            const letterLis = document.querySelectorAll('.letter')
-            for (let item of letterLis) {
-                if (item.className === 'hide letter ' + letter) {
 
+            const listItems = document.querySelectorAll('li')
+
+            for(let item of listItems){
+
+                if (item.className === 'hide letter ' + letter){
+                   
                     item.className = 'show letter ' + letter
-                }
-
+                } 
+            
             }
-
-            return true
-
+            
+      
+          
         }
-
+    
     };
 
 

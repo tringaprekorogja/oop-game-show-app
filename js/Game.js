@@ -111,15 +111,15 @@ class Game {
         button.disabled = 'true'
         let letter = button.textContent
         let phrase = this.activePhrase
-        if(!phrase.checkLetter(letter)){
-            button.className ='wrong'
+        if (!phrase.checkLetter(letter)) {
+            button.className = 'wrong'
             this.removeLife()
-            
-        }else if(phrase.checkLetter(letter)){
-            button.className ='chosen'
+
+        } else if (phrase.checkLetter(letter)) {
+            button.className = 'chosen'
             phrase.showMatchedLetter(letter)
             this.checkForwin()
-            if(this.checkForwin()){
+            if (this.checkForwin()) {
                 this.gameOver(true)
             }
 
