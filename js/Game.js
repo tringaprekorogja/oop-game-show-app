@@ -6,7 +6,7 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = this.createPhrases();
-        this.activePhrase = this.getRandomPhrase();
+        this.activePhrase = null;
     }
     /**
     * Creates phrases for use in game
@@ -39,8 +39,10 @@ class Game {
     startGame() {
         const startScreenOverlay = document.querySelector('#overlay')
         startScreenOverlay.style.display = 'none';
-        const phrase = this.activePhrase;
+        const phrase = this.getRandomPhrase();
         phrase.addPhraseToDisplay();
+        this.activePhrase = phrase;
+
     }
     /**
     * Checks for winning move

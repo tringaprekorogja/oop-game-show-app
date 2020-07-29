@@ -4,12 +4,12 @@
 
 
 /*Declares global variables*/
- 
+
 let game; //Declares a varible that initialy isn'set to anything
 const btnToStartGame = document.querySelector('#btn__reset')
 const keyboardButtons = document.querySelector('#qwerty')
 const heartLives = document.querySelectorAll('img')
-const buttons = document.querySelectorAll('.keyrow button') 
+const buttons = document.querySelectorAll('.keyrow button')
 
 
 
@@ -30,10 +30,10 @@ btnToStartGame.addEventListener('click', () => {
         button.disabled = false;
         button.className = 'key'
     }
-  
+
     /*Reset all of the heart images to display the `liveHeart.png` image.*/
-    for (let heart of heartLives) {     
-        heart.setAttribute('src','images/liveHeart.png')
+    for (let heart of heartLives) {
+        heart.setAttribute('src', 'images/liveHeart.png')
     }
     //Creates an instace of the Game object
     game = new Game();
